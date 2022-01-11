@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src", //Dispensa o uso de ./ e ../ nas importações
     "target": "es5",
     "lib": [
       "dom",

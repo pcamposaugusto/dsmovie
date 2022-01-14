@@ -10,25 +10,41 @@ function Listing() {
     const [pageNumber, setPageNumber] = useState(0);
     // Boa prática - iniciar o useState com um valor inicial
 
+    // Cria-se de um novo estado para guardar no componente a página que foi carregada e, depois, são setados os valores iniciais de page
+    const [page, setPage] = useState<MoviePage>({
+        content: [],
+        last: true,
+        totalPages: 0,
+        totalElements: 0,
+        size: 12,
+        number: 0,
+        first: true,
+        numberOfElements: 0,
+        empty: true,
+    });
+
+
     useEffect(() => {
-        axios.get(`${BASE_URL}/movies?size=12&page=1`).then(response => {
+        axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}`).then(response => {
             const data = response.data as MoviePage;
-            console.log(data);
-            setPageNumber(data.number);
+            setPage(data);
         });
-    }, []);
+    }, [pageNumber]);
 
     // O segundo argumento do useEffect é uma lista de objetos a ser observada pelo Hook. Sempre que houver alteração em qualquer um dos objetos listados, a função será executada novamente. Se a lista estiver vazia, a função será executada SOMENTE quando o componente for carregado. Dessa forma, a requisição será feita apenas uma vez de maneira controlada.
-    
+
     return (
         <>
-        <p>{pageNumber}</p>
             <Pagination />
             <div className="container">
                 <div className="row">
-                    <div className="col-sm-6 col-lg-4 col-xl-3 mb-3">
-                        <MovieCard />
-                    </div>
+                    {page.content.map(movie => (
+                        // Em uma renderização dinâmica de coleção, cada elemento renderizado DEVE possuir um atributo key - aqui, no caso, é o id do movie
+                        <div key={movie.id} className="col-sm-6 col-lg-4 col-xl-3 mb-3">
+                            <MovieCard movie={movie} />
+                        </div>
+                    )
+                    )}
                 </div>
             </div>
         </>

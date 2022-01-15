@@ -31,11 +31,16 @@ function Listing() {
         });
     }, [pageNumber]);
 
-    // O segundo argumento do useEffect é uma lista de objetos a ser observada pelo Hook. Sempre que houver alteração em qualquer um dos objetos listados, a função será executada novamente. Se a lista estiver vazia, a função será executada SOMENTE quando o componente for carregado. Dessa forma, a requisição será feita apenas uma vez de maneira controlada.
+    // O segundo argumento do useEffect é uma lista de objetos a ser observada pelo Hook. Sempre que houver alteração em qualquer um dos objetos listados, a função será executada novamente. Nesse caso, a lista a ser observada é a pageNumber, ou seja, sempre que o número da página for alterado, a função useEffect é executada novamente. Se a lista estiver vazia, a função será executada SOMENTE quando o componente for carregado. Dessa forma, a requisição será feita apenas uma vez de maneira controlada.
+
+    // Esta é uma função Lambda que recebe um número como parâmetro que será setado como o novo número da página através da função setPageNumber()
+    const handlePageChange = (newPageNumber : number) => {
+        setPageNumber(newPageNumber);
+    }
 
     return (
         <>
-            <Pagination />
+            <Pagination page={page} onChange={handlePageChange} />
             <div className="container">
                 <div className="row">
                     {page.content.map(movie => (

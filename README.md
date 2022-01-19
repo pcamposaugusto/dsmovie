@@ -83,12 +83,12 @@ http://localhost:8080/
 As seguintes tecnologias foram usadas na construção do projeto:
 
 * HTML e CSS
-* JAVASCRIPT
-* BOOTSTRAP
-* REACT
+* Typescript
+* Bootstrap
+* React
 * NodeJS 16.x
-* JAVA (JDK 17)
-* SPRING
+* Java (JDK 17)
+* Spring
 * Postman
 * Git
 * Postgresql 14 e pgAdmin

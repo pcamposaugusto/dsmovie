@@ -10,7 +10,7 @@
 ### Objetivos:
 
 - Criar os projetos backend e frontend, com os frameworks Spring e React.
-- Desenvolvimemnto do frontend com Bootstrap.
+- Desenvolvimento do frontend com Bootstrap.
 - Implementação do backend, seguindo o modelo de domínio e o padrão de arquitetura em camadas, com acesso ao banco de dados. 
 - Criação dos endpoints da API REST.
 - Criação e validação do Postgres local com o pgAdimin e posterior provisionamento do banco no Heroku

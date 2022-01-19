@@ -13,7 +13,7 @@
 - Desenvolvimento do frontend com Bootstrap.
 - Implementação do backend, seguindo o modelo de domínio e o padrão de arquitetura em camadas, com acesso ao banco de dados. 
 - Criação dos endpoints da API REST.
-- Criação e validação do Postgres local com o pgAdimin e posterior provisionamento do banco no Heroku
+- Criação e validação do Postgres local com o pgAdimin e posterior provisionamento do banco no Heroku.
 - Implantação do app na nuvem (Heroku).
 - Implantação do app no Netlify.
 - Integração do backend e frontend, utilizando três pilares do React: Componentes, Props e Estado; além de React Hooks.

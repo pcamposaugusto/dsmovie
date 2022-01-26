@@ -10,10 +10,10 @@
 ### Objetivos:
 
 - Criar os projetos backend e frontend, com os frameworks Spring e React.
-- Desenvolvimemnto do frontend com Bootstrap.
+- Desenvolvimento do frontend com Bootstrap.
 - Implementação do backend, seguindo o modelo de domínio e o padrão de arquitetura em camadas, com acesso ao banco de dados. 
 - Criação dos endpoints da API REST.
-- Criação e validação do Postgres local com o pgAdimin e posterior provisionamento do banco no Heroku
+- Criação e validação do Postgres local com o pgAdimin e posterior provisionamento do banco no Heroku.
 - Implantação do app na nuvem (Heroku).
 - Implantação do app no Netlify.
 - Integração do backend e frontend, utilizando três pilares do React: Componentes, Props e Estado; além de React Hooks.
@@ -83,12 +83,12 @@ http://localhost:8080/
 As seguintes tecnologias foram usadas na construção do projeto:
 
 * HTML e CSS
-* JAVASCRIPT
-* BOOTSTRAP
-* REACT
+* Typescript
+* Bootstrap
+* React
 * NodeJS 16.x
-* JAVA (JDK 17)
-* SPRING
+* Java (JDK 17)
+* Spring
 * Postman
 * Git
 * Postgresql 14 e pgAdmin
